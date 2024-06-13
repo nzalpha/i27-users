@@ -2,12 +2,12 @@
 # Base image 
 
 FROM openjdk:18.0.2.1-jdk
-RUN mkdir -p /opt/i27/
+RUN mkdir -p /opt/ali/
 ARG JAR_SOURCE
-WORKDIR /opt/i27/
-COPY ["${JAR_SOURCE}", "/opt/i27/i27cart-user.jar"]
+WORKDIR /opt/ali/
+COPY ["${JAR_SOURCE}", "/opt/ali/cart-user.jar"]
 RUN chmod 777 /opt/i27/
 EXPOSE 8232
-CMD ["java", "-jar", "/opt/i27/i27cart-user.jar"]
+CMD ["java", "-jar", "/opt/ali/cart-user.jar"]
 
 
