@@ -93,6 +93,7 @@ pipeline {
                 }
             }
             steps{
+                echo "Went till the execution"
                 script{
                 imageValidation().call()    
                 dockerDeploy('dev','5232','8232').call()
